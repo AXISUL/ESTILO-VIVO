@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='prendasEscogidas.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+  <title>hola</title>
+</head>
+<body>
+  <nav class="menu">
+    <ul class="listmenu">
+      <li class="logo"><img src="{{ url_for('static', filename='imagenes/logo.png') }}"></li>
+      <li class="elemento1"><a href="iniciarsesion">Iniciar Sesion</a></li>
+      <li class="elemento2"><a href="comofunciona">¿Como Funciona?</a></li>
+      <li class="elemento3"><a href="comunidad">Comunidad</a></li>
+      <li class="elemento4"><a href="cameron">Cameron</a><img src="icono_cameron.png"></li>
+    </ul>
+  </nav>
+  
+  <h1>Imágenes</h1>
+  <div class="contenedor_img">
+    {% for opcion in lista_imagenes %}
+        <a href="{{ url_for('prendaindividual',key=key, imagen=opcion) }}"><img src="{{ url_for('static', filename='imagenes/' + opcion) }}" alt="Imagen"></a>
+    {% endfor %}
+  </div>
+</body>
+</html>

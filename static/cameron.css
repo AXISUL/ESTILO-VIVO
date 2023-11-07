@@ -1,0 +1,53 @@
+body{
+  background:#fff;
+  color:#fff;
+  font-family:arial;
+}
+
+.preguntasCamerongrid{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap:5%;
+}
+.cameron{
+  /*Super importante para poder ocupar el 100 y poder manerajr el flexbox*/
+  width: 100%;
+  grid-row: 1 / 2; /* Especifica las filas en las que se extiende el elemento */
+  grid-column: 2 / 3; 
+  display: flex; /* Utiliza flexbox para centrar la imagen */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center;
+  
+}
+.cameron img{
+  width:100px;
+  height:auto;
+  border-radius:100%;
+  
+}
+.formCameron {
+  background:#c4c4c4;
+  grid-row:2/4;
+  grid-column:2/3;
+}
+.form label, input,select{
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+.form label{
+  margin-top:1%;
+  margin-bottom:1%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+.formCameron button{
+  width:80%;
+  margin-top:2%;
+  margin-bottom:2%;
+  margin-left:10%;
+  margin-right:10%;
+}

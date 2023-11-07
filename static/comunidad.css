@@ -1,0 +1,31 @@
+body{
+  
+}
+h1{
+  width:100%;
+}
+.comunidadPadre{
+  width:100%;
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+.masGustadosH{
+  grid-column:2/5;
+  grid-row:1/2;
+}
+.masGustadosH img{
+  width:100px;
+  margin-left:25.5px;
+  margin-right:25.5px;
+}
+.masGustadosM{
+  grid-column:2/5;
+  grid-row:2/3;
+}
+.masGustadosM img{
+  width:100px;
+  margin-left:25.5px;
+  margin-right:25.5px;
+}
+/* modo 5 estrellas */
