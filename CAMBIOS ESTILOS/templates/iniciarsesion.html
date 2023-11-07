@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/estilo.css">
+  <title>iniciar Sesion</title>
+</head>
+<body>
+  <nav class="menu">
+    <ul class="listmenu">
+      <li class="logo"><img src="{{ url_for('static', filename='imagenes/logo.png') }}"></li>
+      <li class="elemento1"><a href="iniciarsesion">Iniciar Sesion</a></li>
+      <li class="elemento2"><a href="comofunciona">¿Como Funciona?</a></li>
+      <li class="elemento3"><a href="comunidad">Comunidad</a></li>
+      <li class="elemento4"><a href="cameron">Cameron</a><img src="icono_cameron.png"></li>
+    </ul>
+  </nav>
+  <div class="inicioSpadre">
+    <div class="texto">Inicio Sesion</div>
+    <form class="inicioSesion">
+      <label>Correo</label>
+      <input type="email" required>
+      <label>Contraseña</label>
+      <input type="password" required>
+      <button type="submit">Iniciar Sesion</button>
+    </form>
+  </div>
+  <footer>
+    <img src="{{ url_for('static', filename='imagenes/red_facebook.png') }}" alt="facebook">
+    <img src="{{ url_for('static', filename='imagenes/red_whatsapp.png') }}" alt="whatsapp">
+    <img src="{{ url_for('static', filename='imagenes/red_instagram.png') }}" alt="instagram">
+    <img src="{{ url_for('static', filename='imagenes/red_X.png') }}" alt="X">
+  </footer>
+</body>
+</html>
