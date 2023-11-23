@@ -1,0 +1,19 @@
+.imagen_selc{
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 2%;
+    border-radius: 10px;
+    border-color: #c4c4c4;
+    box-shadow: #c4c4c4 10px;
+    float: left;
+}
+
+.comentario{
+    align-content: center;
+}
+
+.imagenes_opciones{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 2%;
+}

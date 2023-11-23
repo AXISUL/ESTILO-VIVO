@@ -1,0 +1,112 @@
+{% load static %}
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+		<!--Iconos-->
+		<script
+			src="https://kit.fontawesome.com/eb496ab1a0.js"
+			crossorigin="anonymous"></script>
+	
+      <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+		<title>Cameron</title>
+	</head>
+	<body>
+		<header>
+			<div class="back">
+				<div class="menu container">
+					<a href="/" class="logo">Estilo Vivo</a>
+					<input type="checkbox" id="menu" />
+					<label for="menu">
+						<a href="#" class="fa-solid fa-bars"></a>
+					</label>
+					<nav class="navbar">
+						<ul>
+							<li><a href="/comofunciona/">¿como funciona?</a></li>
+							<li><a href="/comunidad/">comunidad</a></li>
+							<li><a href="/">inicio</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<section id="inicio">
+					<div class="contenedor">
+  <div class="comunidadPadre">
+    <div class="masGustadosH">
+        <center><h1>Más gustados Hombre</h1></center>
+        <div class="row">
+            {% for outfit in comunidad_masculino %}
+                <div class="col-md-2">
+                    <div class="outfit-item">
+                        <img src="{{ outfit.imagen.url }}" alt="Outfit Image" class="img-fluid">
+                        <p class="corazones-text">❤️{{ outfit.cantidad_corazones }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="masGustadosM">
+        <center><h1>Más gustados Mujer</h1></center>
+        <div class="row">
+            {% for outfit in comunidad_femenino %}
+                <div class="col-md-2">
+                    <div class="outfit-item">
+                        <img src="{{ outfit.imagen.url }}" alt="Outfit Image" class="img-fluid">
+                        <p class="corazones-text">❤️{{ outfit.cantidad_corazones }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="{% static 'imagenes/logo2.png' %} " alt="Logo de SLee Dw" />
+          </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
+        </p>
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small
+        >&copy; 2023 <b>Estilo Vivo</b> - Todos los Derechos
+        Reservados.</small
+      >
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

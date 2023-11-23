@@ -1,0 +1,161 @@
+{% load static %}
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+			rel="stylesheet"
+		/>
+		<!--Iconos-->
+		<script
+			src="https://kit.fontawesome.com/eb496ab1a0.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+		<title>opciones</title>
+	</head>
+	<body>
+		<header>
+			<div class="back">
+				<div class="menu container">
+					<a href="/index/" class="logo">Estilo Vivo</a>
+					<input type="checkbox" id="menu" />
+					<label for="menu">
+						<img src="imagenes/menu.png" class="menu-icono" alt="" />
+					</label>
+					<nav class="navbar">
+						<ul>
+							<li><a href="/comofunciona/">¿como funciona?</a></li>
+							<li><a href="/comunidad/">comunidad</a></li>
+							<li><a href="/index/">inicio</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<section id="inicio">
+			<div class="contenedor_img">
+				<a href="/cameron/" class="my-button">Cameron</a>
+				<div class="contenedor">
+                    <h1>Resultados:</h1>
+
+                    {% if resultados %}
+                        <ul>
+                            {% for outfit in resultados %}
+                                <li>
+                                    <p>Genero: {{ outfit.genero }}</p>
+                                    <p>Estilo: {{ outfit.estilo_prenda }}</p>
+                                    <p>Color: {{ outfit.color_prenda }}</p>
+                                    
+                                    {% if outfit.imagen %}
+                                        <img src="{{ outfit.imagen.url }}" alt="Outfit Image">
+                                    {% else %}
+                                        <p>No hay imagen disponible</p>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No se encontraron resultados.</p>
+                    {% endif %}
+				</div>
+			</div>
+		</section>
+		<footer class="pie-pagina">
+			<div class="grupo-1">
+				<div class="box">
+					<figure>
+						<a href="#">
+							<img src="imagenes/logo2.png" alt="Logo de SLee Dw" />
+						</a>
+					</figure>
+				</div>
+				<div class="box">
+					<h2>SOBRE NOSOTROS</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
+					</p>
+				</div>
+				<div class="box">
+					<h2>SIGUENOS</h2>
+					<div class="red-social">
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-instagram"></a>
+					</div>
+				</div>
+			</div>
+			<div class="grupo-2">
+				<small
+					>&copy; 2023 <b>Estilo Vivo</b> - Todos los Derechos
+					Reservados.</small
+				>
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <h1>Resultados:</h1>
+
+    {% if resultados %}
+        <ul>
+            {% for outfit in resultados %}
+                <li>
+                    <p>Genero: {{ outfit.genero }}</p>
+                    <p>Estilo: {{ outfit.estilo_prenda }}</p>
+                    <p>Color: {{ outfit.color_prenda }}</p>
+                    
+                    {% if outfit.imagen %}
+                        <img src="{{ outfit.imagen.url }}" alt="Outfit Image">
+                    {% else %}
+                        <p>No hay imagen disponible</p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+</body>
+</html>

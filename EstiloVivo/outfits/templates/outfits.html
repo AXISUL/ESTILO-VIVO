@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outfits</title>
+</head>
+<body>
+    
+
+    <h2>Outfits Guardados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Género</th>
+                <th>Estilo Prenda</th>
+                <th>Color Prenda</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for outfit in outfits %}
+                <tr>
+                    <td>{{ outfit.get_genero_display }}</td>
+                    <td>{{ outfit.get_estilo_prenda_display }}</td>
+                    <td>{{ outfit.get_color_prenda_display }}</td>
+                    <td>
+                        {% if outfit.imagen %}
+                            <img src="{{ outfit.imagen.url }}" alt="Imagen del Outfit" style="max-width: 100px; max-height: 100px;">
+                        {% else %}
+                            Sin imagen
+                        {% endif %}
+                    </td>
+                                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

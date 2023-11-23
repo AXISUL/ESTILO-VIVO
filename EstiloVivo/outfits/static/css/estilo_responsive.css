@@ -1,0 +1,48 @@
+/*menu*/
+@media (max-width: 991px) {
+	.logo {
+		width: 90%;
+	}
+	.menu {
+		padding: 30px;
+	}
+
+	.menu label {
+		display: initial;
+	}
+
+	.back {
+		padding: 47px 0;
+	}
+
+	.menu .navbar {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background-color: #2f1000;
+		display: none;
+	}
+
+	.menu .navbar ul li {
+		width: 100%;
+	}
+	#menu:checked ~ .navbar {
+		display: initial;
+	}
+}
+/*slider*/
+@media (max-width: 991px) {
+	.slider-frame {
+		width: 90%;
+	}
+}
+/*footer*/
+@media screen and (max-width: 800px) {
+	.pie-pagina .grupo-1 {
+		width: 90%;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 30px;
+		padding: 35px 0px;
+	}
+}
